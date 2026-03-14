@@ -6,7 +6,7 @@
        
 - name: Start and enable {{ component }} service
   ansible.builtin.service:
-   name: {{ component }}
+   name: "{{ component }}"
    state: started
    enabled: yes
   notify: daemon-reload
