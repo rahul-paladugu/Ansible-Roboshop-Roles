@@ -1,7 +1,7 @@
 # Service setup
 - name: Setup service
-  ansible.builtin.copy:
-   src: catalogue.service
+  ansible.builtin.template:
+   src: catalogue.service.j2
    dest: /etc/systemd/system/{{ component }}.service
        
 - name: Start and enable {{ component }} service
@@ -9,4 +9,4 @@
    name: {{ component }}
    state: started
    enabled: yes
-   daemon-reload: true
+  notify: daemon-reload
