@@ -1,0 +1,10 @@
+#User component setup
+ - name: nodejs setup
+   ansible.builtin.import_role:
+     name: common-code
+     tasks_from: nodejs-setup.yaml
+#App setup
+ - name: App setup
+   ansible.builtin.import_role:
+     name: common-code
+     tasks_from: app-setup.yaml
