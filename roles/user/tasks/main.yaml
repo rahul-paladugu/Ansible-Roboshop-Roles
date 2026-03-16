@@ -2,7 +2,7 @@
  - name: nodejs setup
    ansible.builtin.import_role:
      name: common-code
-     tasks_from: nodejs-setup.yaml
+     tasks_from: nodejs.yaml
 #App setup
  - name: App setup
    ansible.builtin.import_role:
