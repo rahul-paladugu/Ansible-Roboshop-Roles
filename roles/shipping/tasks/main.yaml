@@ -1,8 +1,4 @@
 #Python setup for shipping server
-- name: configure shipping server
-  hosts: shipping
-  become: yes
-  tasks:
   - name: install maven
     ansible.builtin.dnf:
       name: "{{ item }}"
