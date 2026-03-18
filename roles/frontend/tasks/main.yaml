@@ -30,9 +30,4 @@
      ansible.builtin.copy:
        src: nginx.conf
        dest: /etc/nginx/nginx.conf 
-
-   - name: Start and enable nginx
-     ansible.builtin.service:
-       name: nginx
-       state: restarted
-       enabled: yes
+     notify: restart nginx
